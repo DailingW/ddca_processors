@@ -341,13 +341,12 @@ void Vtestbench___024root___nba_sequent__TOP__3(Vtestbench___024root* vlSelf) {
            [(0x0000007fU & vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__InstrD)]);
     vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__StallF 
         = ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__ResultSrcE) 
-           & ((0U != (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__RDE)) 
-              & (((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__RDE) 
-                  == (0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__InstrD 
-                                     >> 0x00000014U))) 
-                 | ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__RDE) 
-                    == (0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__InstrD 
-                                       >> 0x0000000fU))))));
+           & (((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__RDE) 
+               == (0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__InstrD 
+                                  >> 0x00000014U))) 
+              | ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__RDE) 
+                 == (0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__InstrD 
+                                    >> 0x0000000fU)))));
     vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__dp__DOT__PCNext 
         = ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__PCSrcE)
             ? vlSelfRef.testbench__DOT__dut__DOT__rvsingle__DOT__dp__DOT__PCTargetE

@@ -28,8 +28,7 @@ module hazardunit(input  logic [4:0]  RS1D, RS2D, RS1E, RS2E,
                 FwdBE = 2'b00;
         end
 
-    assign lwStall = ResultSrcE[0] && (RDE != 5'd0) &&
-                     ((RS1D == RDE) || (RS2D == RDE));
+    assign lwStall = ResultSrcE[0] && ((RS1D == RDE) || (RS2D == RDE));
     assign StallF = lwStall;
     assign StallD = lwStall;
     assign FlushE = lwStall || PCSrcE;
