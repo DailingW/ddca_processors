@@ -1,0 +1,46 @@
+module controller(input logic clk, reset,
+                  input logic [6:0] op,
+                  input logic [2:0] funct3,
+                  input logic funct7b5,
+                  input logic ZeroE,
+                  input logic FlushE,
+                  output logic [1:0] ResultSrcE, ResultSrcW,
+                  output logic MemWriteM,
+                  output logic PCSrcE, ALUSrcE,
+                  output logic RegWriteM, RegWriteW,
+                  output logic [1:0] ImmSrcD,
+                  output logic [2:0] ALUControlE);
+    logic RegWriteD, JumpD, BranchD, ALUSrcD, MemWriteD;
+    logic [1:0] ResultSrcD;
+    logic [2:0] ALUControlD;
+    
+    logic RegWriteE, JumpE, BranchE, MemWriteE;
+    
+    logic [1:0] ResultSrcM;
+    
+    logic [1:0] ALUOp;
+    maindec md(op, ResultSrcD, MemWriteD, BranchD,
+                ALUSrcD, RegWriteD, JumpD, ImmSrcD, ALUOp);
+    aludec ad(op[5], funct3, funct7b5, ALUOp, ALUControlD);
+
+    // PIPELINE EXECUTE
+    floprc #(1) regwriteflop(clk, reset, FlushE, RegWriteD, RegWriteE);
+    floprc #(2) resultsrcflop(clk, reset, FlushE, ResultSrcD, ResultSrcE);
+    floprc #(1) memwriteflop(clk, reset, FlushE, MemWriteD, MemWriteE);
+    floprc #(1) jumpflop(clk, reset, FlushE, JumpD, JumpE);
+    floprc #(1) branchflop(clk, reset, FlushE, BranchD, BranchE);
+    floprc #(3) alucontrolflop(clk, reset, FlushE, ALUControlD, ALUControlE);
+    floprc #(1) alusrcflop(clk, reset, FlushE, ALUSrcD, ALUSrcE);
+
+    assign PCSrcE = BranchE & ZeroE | JumpE;
+
+    // PIPELINE MEMORY
+    flopr #(1) regwritemem(clk, reset, RegWriteE, RegWriteM);
+    flopr #(2) resultsrcmem(clk, reset, ResultSrcE, ResultSrcM);
+    flopr #(1) memwritemem(clk, reset, MemWriteE, MemWriteM);
+
+    // PIPELINE WRITEBACK
+    flopr #(1) regwritewb(clk, reset, RegWriteM, RegWriteW);
+    flopr #(2) resultsrcwb(clk, reset, ResultSrcM, ResultSrcW);
+
+endmodule
