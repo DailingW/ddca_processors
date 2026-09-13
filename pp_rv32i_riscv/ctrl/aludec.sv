@@ -10,7 +10,8 @@ module aludec(input logic opb5,
         case(ALUOp)
             2'b00: ALUControl = 3'b000; // addition
             2'b01: ALUControl = 3'b001; // subtraction
-        default: case(funct3) // R–type or I–type ALU
+        default: 
+            case(funct3) // R–type or I–type ALU
                 3'b000: if (RtypeSub)
                             ALUControl = 3'b001; // sub
                         else

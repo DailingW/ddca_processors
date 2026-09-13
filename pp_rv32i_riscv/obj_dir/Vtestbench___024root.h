@@ -24,7 +24,8 @@ class alignas(VL_CACHE_LINE_BYTES) Vtestbench___024root final {
         CData/*0:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__ALUSrcE;
         CData/*0:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__RegWriteM;
         CData/*0:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__RegWriteW;
-        CData/*0:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__PCSrcE;
+        CData/*0:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__LessSignedE;
+        CData/*0:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__LessUnsignedE;
         CData/*4:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__RS1E;
         CData/*4:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__RS2E;
         CData/*4:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__RDE;
@@ -47,12 +48,11 @@ class alignas(VL_CACHE_LINE_BYTES) Vtestbench___024root final {
         CData/*2:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E;
         CData/*2:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3M;
         CData/*2:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3W;
+        CData/*2:0*/ __Vdly__testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E;
         CData/*0:0*/ __VdlySet__testbench__DOT__reset__v0;
         CData/*0:0*/ __VdlySet__testbench__DOT__reset__v1;
         CData/*0:0*/ __VdlySet__testbench__DOT__clk__v0;
         CData/*0:0*/ __VdlySet__testbench__DOT__clk__v1;
-        CData/*4:0*/ __VdlyDim0__testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf__v0;
-        CData/*0:0*/ __VdlySet__testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf__v0;
         CData/*0:0*/ __VstlFirstIteration;
         CData/*0:0*/ __VstlPhaseResult;
         CData/*0:0*/ __Vtrigprevexpr___TOP__testbench__DOT__clk__0;
@@ -91,7 +91,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtestbench___024root final {
         IData/*31:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b;
         IData/*31:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__Result;
         IData/*31:0*/ testbench__DOT__dut__DOT__dmem__DOT__rd;
-        IData/*31:0*/ __VdlyVal__testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf__v0;
         IData/*31:0*/ __VactIterCount;
         IData/*31:0*/ __VinactIterCount;
         IData/*31:0*/ __Vi;
@@ -102,7 +101,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtestbench___024root final {
         VlUnpacked<QData/*63:0*/, 1> __VactTriggered;
         VlUnpacked<QData/*63:0*/, 1> __VactTriggeredAcc;
         VlUnpacked<QData/*63:0*/, 1> __VnbaTriggered;
-        VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
+        VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;
     };
     VlDelayScheduler __VdlySched;
 

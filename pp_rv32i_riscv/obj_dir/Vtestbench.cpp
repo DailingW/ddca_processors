@@ -140,6 +140,6 @@ VL_ATTR_COLD void Vtestbench::traceBaseModel(VerilatedTraceBaseC* tfp, int level
             " use --trace-fst with VerilatedFst object, and --trace-vcd with VerilatedVcd object");
     }
     stfp->spTrace()->addModel(this);
-    stfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP), name(), false, 137);
+    stfp->spTrace()->addInitCb(&trace_init, &(vlSymsp->TOP), name(), false, 139);
     Vtestbench___024root__trace_register(&(vlSymsp->TOP), stfp->spTrace());
 }

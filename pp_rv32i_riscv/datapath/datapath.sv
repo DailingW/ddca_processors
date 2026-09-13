@@ -5,7 +5,7 @@ module datapath(input logic clk, reset,
                 input logic [1:0] ImmSrcD,
                 input logic [2:0] ALUControlE,
                 output logic [2:0] Funct3M,
-                output logic ZeroE,
+                output logic ZeroE, LessSignedE, LessUnsignedE,
                 output logic [31:0] PCF,
                 input logic [31:0] Instr,
                 output logic [31:0] InstrD,
@@ -59,9 +59,8 @@ module datapath(input logic clk, reset,
     mux3 #(32) srcafwdmux(RD1E, ResultW, ALUResultM, ForwardAE, SrcAE);
     mux3 #(32) srcbfwdmux(RD2E, ResultW, ALUResultM, ForwardBE, WriteDataE);
     mux2 #(32) srcbmux(WriteDataE, ImmExtE, ALUSrcE, SrcBE);
-    alu alu(SrcAE, SrcBE, ALUControlE, ALUResultE, ZeroE);
+    alu alu(SrcAE, SrcBE, ALUControlE, ALUResultE, ZeroE, LessSignedE, LessUnsignedE);
     adder #(32) pcaddbranch(PCE, ImmExtE, PCTargetE);
-    
 
     // PIPELINE MEMORY
     flopr #(32) aluresult(clk, reset, ALUResultE, ALUResultM);

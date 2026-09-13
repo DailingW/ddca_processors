@@ -38,6 +38,41 @@ extern const VlWide<128>/*4095:0*/ Vtestbench__ConstPool__CONST_hf7aac566_0 = Vl
         0x00000000, 0x00000000, 0x00000000, 0x00000000
 }};
 
+extern const VlUnpacked<CData/*0:0*/, 256> Vtestbench__ConstPool__TABLE_he34e10b0_0 = {{
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 0U, 0U, 0U, 1U, 0U, 0U,
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 0U, 0U, 0U, 1U, 0U, 0U,
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U,
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 0U, 0U, 0U, 1U, 0U, 0U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U,
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 0U, 0U, 0U, 1U, 0U, 0U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U,
+    0U, 1U, 0U, 0U, 0U, 1U, 0U, 0U,
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U,
+    0U, 1U, 0U, 0U, 0U, 1U, 0U, 0U,
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U,
+    0U, 1U, 0U, 0U, 0U, 1U, 0U, 0U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U,
+    0U, 1U, 0U, 0U, 0U, 1U, 1U, 1U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U,
+    0U, 1U, 0U, 0U, 0U, 1U, 0U, 0U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U,
+    0U, 1U, 1U, 1U, 0U, 1U, 0U, 0U
+}};
+
 extern const VlUnpacked<CData/*2:0*/, 64> Vtestbench__ConstPool__TABLE_hf1b5509a_0 = {{
     0U, 1U, 0U, 0U, 0U, 1U, 0U, 0U,
     0U, 1U, 5U, 5U, 0U, 1U, 0U, 0U,

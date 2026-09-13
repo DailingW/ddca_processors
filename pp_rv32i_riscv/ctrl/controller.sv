@@ -2,7 +2,7 @@ module controller(input logic clk, reset,
                   input logic [6:0] op,
                   input logic [2:0] funct3D,
                   input logic funct7b5,
-                  input logic ZeroE,
+                  input logic ZeroE, LessSignedE, LessUnsignedE,
                   input logic FlushE,
                   output logic [1:0] ResultSrcE, ResultSrcW,
                   output logic MemWriteM,
@@ -31,8 +31,20 @@ module controller(input logic clk, reset,
     floprc #(3) alucontrolflop(clk, reset, FlushE, ALUControlD, ALUControlE);
     floprc #(1) alusrcflop(clk, reset, FlushE, ALUSrcD, ALUSrcE);
     floprc #(3) funct3flop(clk, reset, FlushE, funct3D, funct3E);
-
-    assign PCSrcE = BranchE & ZeroE | JumpE;
+    always_comb begin
+        PCSrcE = JumpE;
+        if (BranchE) begin
+            case(funct3E)
+                3'b000: PCSrcE = ZeroE; // beq (sub)
+                3'b001: PCSrcE = ~ZeroE; // bne (sub)
+                3'b100: PCSrcE = LessSignedE; // blt (less) 
+                3'b101: PCSrcE = ~LessSignedE; // bge (!less)
+                3'b110: PCSrcE = LessUnsignedE; // bltu (lessU)
+                3'b111: PCSrcE = ~LessUnsignedE; // bgeu (!lessU)
+                default: PCSrcE = 1'b0; // undefined branch behavior
+            endcase
+        end
+    end
 
     // PIPELINE MEMORY
     flopr #(1) regwritemem(clk, reset, RegWriteE, RegWriteM);
