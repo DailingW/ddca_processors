@@ -20,7 +20,9 @@ module alu(input  logic [31:0] a, b,
       3'b001: Result = sum[31:0]; // -
       3'b010: Result = a & b;
       3'b011: Result = a | b;
+      3'b100: Result = a ^ b;
       3'b101: Result = ($signed(a) < $signed(b)) ? 32'b1 : 32'b0;
+      3'b110: Result = ($unsigned(a) < $unsigned(b)) ? 32'b1 : 32'b0;
       default: Result = 32'bx;
     endcase
 endmodule
