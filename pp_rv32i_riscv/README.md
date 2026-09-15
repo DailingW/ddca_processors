@@ -1,9 +1,8 @@
 # Pipelined RV32I Additions
 
-This directory contains a pipelined RISC-V processor targeting the RV32I base
-instruction set.
+DDCSA pipelined RISCV processor Expanded to the full 40 instruction RV32I base instruction set.
 
-## Build and run
+### Old Testbench
 
 From this directory:
 

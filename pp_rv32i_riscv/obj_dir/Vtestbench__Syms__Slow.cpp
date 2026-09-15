@@ -11,7 +11,7 @@ Vtestbench__Syms::Vtestbench__Syms(VerilatedContext* contextp, const char* namep
     , TOP{this, namep}
 {
     // Check resources
-    Verilated::stackCheck(322);
+    Verilated::stackCheck(326);
     // Setup sub module instances
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-12);

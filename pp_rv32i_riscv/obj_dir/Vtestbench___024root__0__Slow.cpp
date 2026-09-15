@@ -84,16 +84,18 @@ VL_ATTR_COLD bool Vtestbench___024root___trigger_anySet__stl(const VlUnpacked<QD
     return (0U);
 }
 
-extern const VlWide<128>/*4095:0*/ Vtestbench__ConstPool__CONST_hf7aac566_0;
-extern const VlUnpacked<CData/*0:0*/, 256> Vtestbench__ConstPool__TABLE_he34e10b0_0;
+extern const VlWide<128>/*4095:0*/ Vtestbench__ConstPool__CONST_h8c87706c_0;
 
 VL_ATTR_COLD void Vtestbench___024root___stl_sequent__TOP__0(Vtestbench___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtestbench___024root___stl_sequent__TOP__0\n"); );
     Vtestbench__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
+    // Locals
+    IData/*31:0*/ __VdfgRegularize_hebeb780c_0_0;
+    __VdfgRegularize_hebeb780c_0_0 = 0;
     // Body
     vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls 
-        = (0x000007ffU & Vtestbench__ConstPool__CONST_hf7aac566_0
+        = (0x00000fffU & Vtestbench__ConstPool__CONST_h8c87706c_0
            [(0x0000007fU & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD)]);
     vlSelfRef.testbench__DOT__dut__DOT__dmem__DOT__rd 
         = ((4U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__funct3M))
@@ -197,49 +199,71 @@ VL_ATTR_COLD void Vtestbench___024root___stl_sequent__TOP__0(Vtestbench___024roo
         = ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUSrcE)
             ? vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ImmExtE
             : vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__WriteDataE);
+    __VdfgRegularize_hebeb780c_0_0 = (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a 
+                                      << (0x0000001fU 
+                                          & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b));
+    vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessSignedE 
+        = VL_LTS_III(32, vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a, vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b);
     vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessUnsignedE 
         = (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a 
            < vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b);
-    vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessSignedE 
-        = VL_LTS_III(32, vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a, vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b);
     vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__Result 
-        = ((4U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
-            ? (1U & (- (IData)((IData)(((1U == (3U 
-                                                & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))) 
-                                        & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessSignedE))))))
-            : ((2U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
-                ? ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
-                    ? (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a 
-                       | vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b)
-                    : (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a 
-                       & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b))
-                : (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a 
-                   + ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE)) 
-                      + ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
-                          ? (~ vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b)
-                          : vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b)))));
+        = ((8U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
+            ? (((2U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
+                 ? (VL_SHIFTRS_III(32,32,5, vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a, 
+                                   (0x0000001fU & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b)) 
+                    & (- (IData)((1U & (~ (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))))))
+                 : ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
+                     ? __VdfgRegularize_hebeb780c_0_0
+                     : (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a 
+                        >> (0x0000001fU & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b)))) 
+               & (- (IData)((1U & (~ ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE) 
+                                      >> 2U)))))) : 
+           ((4U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
+             ? ((2U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
+                 ? ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
+                     ? __VdfgRegularize_hebeb780c_0_0
+                     : (1U & (- (IData)((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessUnsignedE)))))
+                 : ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
+                     ? (1U & (- (IData)((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessSignedE))))
+                     : (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a 
+                        ^ vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b)))
+             : ((2U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
+                 ? ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
+                     ? (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a 
+                        | vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b)
+                     : (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a 
+                        & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b))
+                 : (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a 
+                    + ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE)) 
+                       + ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
+                           ? (~ vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b)
+                           : vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b))))));
+    vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__PCSrcE 
+        = ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__BranchE)
+            ? ((4U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E))
+                ? ((2U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__JumpE)) 
+                   | (1U & ((2U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E))
+                             ? ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E))
+                                 ? (~ (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessUnsignedE))
+                                 : (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessUnsignedE))
+                             : ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E))
+                                 ? (~ (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessSignedE))
+                                 : (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessSignedE)))))
+                : (((2U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__JumpE)) 
+                    | ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E))
+                        ? (0U != vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__Result)
+                        : (0U == vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__Result))) 
+                   & (- (IData)((1U & (~ ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E) 
+                                          >> 1U)))))))
+            : (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__JumpE));
     vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__FlushE 
-        = (Vtestbench__ConstPool__TABLE_he34e10b0_0
-           [((((0U == vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__Result) 
-               << 7U) | (((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessSignedE) 
-                          << 6U) | ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessUnsignedE) 
-                                    << 5U))) | (((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E) 
-                                                 << 2U) 
-                                                | (((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__BranchE) 
-                                                    << 1U) 
-                                                   | (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__JumpE))))] 
-           | (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__StallF));
+        = (1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__PCSrcE) 
+                 | (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__StallF)));
     vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCNext 
-        = (Vtestbench__ConstPool__TABLE_he34e10b0_0
-           [((((0U == vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__Result) 
-               << 7U) | (((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessSignedE) 
-                          << 6U) | ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessUnsignedE) 
-                                    << 5U))) | (((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E) 
-                                                 << 2U) 
-                                                | (((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__BranchE) 
-                                                    << 1U) 
-                                                   | (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__JumpE))))]
-            ? vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCTargetE
+        = ((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__PCSrcE))
+            ? (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCTargetE 
+               & (- (IData)((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__PCSrcE)))))
             : ((IData)(4U) + vlSelfRef.testbench__DOT__dut__DOT__PC));
 }
 
@@ -271,7 +295,6 @@ VL_ATTR_COLD bool Vtestbench___024root___eval_phase__stl(Vtestbench___024root* v
                     // Inlined CFunc: __Vm_traceActivitySetAll
                     vlSelfRef.__Vm_traceActivity[0U] = 1U;
                     vlSelfRef.__Vm_traceActivity[1U] = 1U;
-                    vlSelfRef.__Vm_traceActivity[2U] = 1U;
                 }
             }
         }
@@ -336,7 +359,7 @@ VL_ATTR_COLD void Vtestbench___024root___ctor_var_reset(Vtestbench___024root* vl
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__ForwardBE = VL_SCOPED_RAND_RESET_I(2, __VscopeHash, 11297250138743135306ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__ResultSrcE = VL_SCOPED_RAND_RESET_I(2, __VscopeHash, 17081960987858623934ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__ResultSrcW = VL_SCOPED_RAND_RESET_I(2, __VscopeHash, 7968351478215132087ull);
-    vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE = VL_SCOPED_RAND_RESET_I(3, __VscopeHash, 13177881083562658579ull);
+    vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE = VL_SCOPED_RAND_RESET_I(4, __VscopeHash, 13177881083562658579ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 6333659945662607761ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCPlus4D = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 17818072181856987967ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCPlus4E = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 4892194072985918358ull);
@@ -363,15 +386,16 @@ VL_ATTR_COLD void Vtestbench___024root___ctor_var_reset(Vtestbench___024root* vl
     for (int __Vi0 = 0; __Vi0 < 32; ++__Vi0) {
         vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf[__Vi0] = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 15890529767874337052ull);
     }
+    vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__PCSrcE = VL_SCOPED_RAND_RESET_I(2, __VscopeHash, 1764956339203770623ull);
+    vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__JumpE = VL_SCOPED_RAND_RESET_I(2, __VscopeHash, 791550003115916250ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__RegWriteE = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 16542732034590075662ull);
-    vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__JumpE = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 791550003115916250ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__BranchE = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 7041800293457444557ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__MemWriteE = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 3683552025968746871ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__ResultSrcM = VL_SCOPED_RAND_RESET_I(2, __VscopeHash, 10419554892453055307ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E = VL_SCOPED_RAND_RESET_I(3, __VscopeHash, 16384308798208230845ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3M = VL_SCOPED_RAND_RESET_I(3, __VscopeHash, 14435071260108400320ull);
     vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3W = VL_SCOPED_RAND_RESET_I(3, __VscopeHash, 12395025018964620120ull);
-    vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls = VL_SCOPED_RAND_RESET_I(11, __VscopeHash, 11450015231630430448ull);
+    vlSelf->testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls = VL_SCOPED_RAND_RESET_I(12, __VscopeHash, 11450015231630430448ull);
     vlSelf->testbench__DOT__dut__DOT__dmem__DOT__rd = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 7789276907249627418ull);
     for (int __Vi0 = 0; __Vi0 < 256; ++__Vi0) {
         vlSelf->testbench__DOT__dut__DOT__dmem__DOT__RAM[__Vi0] = VL_SCOPED_RAND_RESET_I(8, __VscopeHash, 49813727177523641ull);
@@ -379,11 +403,13 @@ VL_ATTR_COLD void Vtestbench___024root___ctor_var_reset(Vtestbench___024root* vl
     for (int __Vi0 = 0; __Vi0 < 64; ++__Vi0) {
         vlSelf->testbench__DOT__dut__DOT__imem__DOT__RAM[__Vi0] = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 430732897116815573ull);
     }
-    vlSelf->__Vdly__testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E = 0;
     vlSelf->__VdlySet__testbench__DOT__reset__v0 = 0;
     vlSelf->__VdlySet__testbench__DOT__reset__v1 = 0;
     vlSelf->__VdlySet__testbench__DOT__clk__v0 = 0;
     vlSelf->__VdlySet__testbench__DOT__clk__v1 = 0;
+    vlSelf->__VdlyVal__testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf__v0 = 0;
+    vlSelf->__VdlyDim0__testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf__v0 = 0;
+    vlSelf->__VdlySet__testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf__v0 = 0;
     for (int __Vi0 = 0; __Vi0 < 1; ++__Vi0) {
         vlSelf->__VstlTriggered[__Vi0] = 0;
     }
@@ -399,7 +425,7 @@ VL_ATTR_COLD void Vtestbench___024root___ctor_var_reset(Vtestbench___024root* vl
         vlSelf->__VnbaTriggered[__Vi0] = 0;
     }
     vlSelf->__Vi = 0;
-    for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
+    for (int __Vi0 = 0; __Vi0 < 2; ++__Vi0) {
         vlSelf->__Vm_traceActivity[__Vi0] = 0;
     }
 }
