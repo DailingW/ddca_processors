@@ -1,9 +1,9 @@
 module datapath(input logic clk, reset,
-                input logic [1:0] ResultSrcW,
-                input logic PCSrcE, ALUSrcE,
+                input logic [1:0] ResultSrcW, PCSrcE,
+                input logic ALUSrcE,
                 input logic RegWriteW,
                 input logic [1:0] ImmSrcD,
-                input logic [2:0] ALUControlE,
+                input logic [3:0] ALUControlE,
                 output logic [2:0] Funct3M,
                 output logic ZeroE, LessSignedE, LessUnsignedE,
                 output logic [31:0] PCF,
@@ -25,7 +25,8 @@ module datapath(input logic clk, reset,
     logic [2:0] Funct3E, Funct3W;
 
     // next PC logic
-    mux2 #(32) pcmux(PCPlus4F, PCTargetE, PCSrcE, PCNext);
+    assign JalrTargetE = {ALUResultE[31:1], 1'b0};
+    mux3 #(32) pcmux(PCPlus4F, PCTargetE, JalrTargetE, PCSrcE, PCNext);
     
     // PIPELINE FETCH
     flopenr #(32) pcreg(clk, reset, ~StallF, PCNext, PCF);

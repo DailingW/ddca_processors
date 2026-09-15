@@ -12,7 +12,7 @@ module riscvpipeline(input logic clk, reset,
     logic StallF, StallD, FlushD, FlushE;
     logic [1:0] ForwardAE, ForwardBE;
     logic [1:0] ResultSrcE, ResultSrcW, ImmSrcD;
-    logic [2:0] ALUControlE;
+    logic [3:0] ALUControlE;
     logic [31:0] InstrD;
     controller c(clk, reset, InstrD[6:0], InstrD[14:12], InstrD[30], ZeroE,
                 LessSignedE, LessUnsignedE, FlushE, ResultSrcE, ResultSrcW, 
