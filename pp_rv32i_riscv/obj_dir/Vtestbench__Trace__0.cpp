@@ -38,47 +38,50 @@ void Vtestbench___024root__trace_chg_0_sub_0(Vtestbench___024root* vlSelf, Veril
         bufp->chgBit(oldp+9,((0U == vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__Result)));
         bufp->chgBit(oldp+10,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessSignedE));
         bufp->chgBit(oldp+11,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__LessUnsignedE));
-        bufp->chgBit(oldp+12,((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__PCSrcE))));
-        bufp->chgCData(oldp+13,((0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+        bufp->chgCData(oldp+12,((0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
                                                 >> 0x0000000fU))),5);
-        bufp->chgCData(oldp+14,((0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+        bufp->chgCData(oldp+13,((0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
                                                 >> 0x00000014U))),5);
-        bufp->chgCData(oldp+15,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RS1E),5);
-        bufp->chgCData(oldp+16,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RS2E),5);
-        bufp->chgCData(oldp+17,((0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+        bufp->chgCData(oldp+14,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RS1E),5);
+        bufp->chgCData(oldp+15,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RS2E),5);
+        bufp->chgCData(oldp+16,((0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
                                                 >> 7U))),5);
-        bufp->chgCData(oldp+18,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RDE),5);
-        bufp->chgCData(oldp+19,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RDM),5);
-        bufp->chgCData(oldp+20,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RDW),5);
-        bufp->chgBit(oldp+21,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__StallF));
+        bufp->chgCData(oldp+17,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RDE),5);
+        bufp->chgCData(oldp+18,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RDM),5);
+        bufp->chgCData(oldp+19,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RDW),5);
+        bufp->chgBit(oldp+20,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__StallF));
+        bufp->chgBit(oldp+21,((0U != (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__PCSrcE))));
         bufp->chgBit(oldp+22,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__FlushE));
         bufp->chgCData(oldp+23,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ForwardAE),2);
         bufp->chgCData(oldp+24,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ForwardBE),2);
-        bufp->chgCData(oldp+25,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ResultSrcE),2);
-        bufp->chgCData(oldp+26,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ResultSrcW),2);
-        bufp->chgCData(oldp+27,((3U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
-                                       >> 9U))),2);
-        bufp->chgCData(oldp+28,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE),4);
-        bufp->chgIData(oldp+29,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD),32);
-        bufp->chgCData(oldp+30,((0x0000007fU & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD)),7);
-        bufp->chgCData(oldp+31,((7U & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+        bufp->chgCData(oldp+25,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__PCSrcE),2);
+        bufp->chgCData(oldp+26,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ResultSrcE),2);
+        bufp->chgCData(oldp+27,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ResultSrcW),2);
+        bufp->chgCData(oldp+28,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__SrcASelectE),2);
+        bufp->chgCData(oldp+29,((7U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
+                                       >> 0x0000000bU))),3);
+        bufp->chgCData(oldp+30,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE),4);
+        bufp->chgIData(oldp+31,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD),32);
+        bufp->chgCData(oldp+32,((0x0000007fU & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD)),7);
+        bufp->chgCData(oldp+33,((7U & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
                                        >> 0x0000000cU))),3);
-        bufp->chgBit(oldp+32,((1U & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+        bufp->chgBit(oldp+34,((1U & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
                                      >> 0x0000001eU))));
-        bufp->chgCData(oldp+33,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__PCSrcE),2);
-        bufp->chgBit(oldp+34,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
-                                     >> 0x0000000bU))));
         bufp->chgBit(oldp+35,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
-                                     >> 4U))));
+                                     >> 0x0000000eU))));
         bufp->chgBit(oldp+36,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
-                                     >> 8U))));
+                                     >> 4U))));
         bufp->chgBit(oldp+37,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
+                                     >> 0x0000000aU))));
+        bufp->chgBit(oldp+38,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
                                      >> 7U))));
-        bufp->chgCData(oldp+38,((3U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
+        bufp->chgCData(oldp+39,((3U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
                                        >> 5U))),2);
-        bufp->chgCData(oldp+39,((3U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls))),2);
-        bufp->chgCData(oldp+40,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__JumpE),2);
-        bufp->chgCData(oldp+41,(Vtestbench__ConstPool__TABLE_h7b4ec6fd_0
+        bufp->chgCData(oldp+40,((3U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls))),2);
+        bufp->chgCData(oldp+41,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__JumpE),2);
+        bufp->chgCData(oldp+42,((3U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
+                                       >> 8U))),2);
+        bufp->chgCData(oldp+43,(Vtestbench__ConstPool__TABLE_h7b4ec6fd_0
                                 [(((IData)((0x40000020U 
                                             == (0x40000020U 
                                                 & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD))) 
@@ -88,113 +91,132 @@ void Vtestbench___024root__trace_chg_0_sub_0(Vtestbench___024root* vlSelf, Veril
                                              | (3U 
                                                 & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
                                                    >> 2U))))]),4);
-        bufp->chgBit(oldp+42,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__RegWriteE));
-        bufp->chgBit(oldp+43,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__BranchE));
-        bufp->chgBit(oldp+44,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__MemWriteE));
-        bufp->chgCData(oldp+45,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__ResultSrcM),2);
-        bufp->chgCData(oldp+46,((3U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
+        bufp->chgBit(oldp+44,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__RegWriteE));
+        bufp->chgBit(oldp+45,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__BranchE));
+        bufp->chgBit(oldp+46,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__MemWriteE));
+        bufp->chgCData(oldp+47,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__ResultSrcM),2);
+        bufp->chgCData(oldp+48,((3U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
                                        >> 2U))),2);
-        bufp->chgCData(oldp+47,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E),3);
-        bufp->chgCData(oldp+48,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3M),3);
-        bufp->chgCData(oldp+49,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3W),3);
-        bufp->chgBit(oldp+50,((1U & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+        bufp->chgCData(oldp+49,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3E),3);
+        bufp->chgCData(oldp+50,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3M),3);
+        bufp->chgCData(oldp+51,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__funct3W),3);
+        bufp->chgBit(oldp+52,((1U & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
                                      >> 5U))));
-        bufp->chgBit(oldp+51,((IData)((0x40000020U 
+        bufp->chgBit(oldp+53,((IData)((0x40000020U 
                                        == (0x40000020U 
                                            & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD)))));
-        bufp->chgBit(oldp+52,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
-                                     >> 8U))));
-        bufp->chgBit(oldp+53,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUSrcE));
         bufp->chgBit(oldp+54,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
+                                     >> 0x0000000aU))));
+        bufp->chgBit(oldp+55,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUSrcE));
+        bufp->chgBit(oldp+56,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
                                      >> 4U))));
-        bufp->chgBit(oldp+55,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__BranchE));
-        bufp->chgSData(oldp+56,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls),12);
-        bufp->chgBit(oldp+57,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
+        bufp->chgBit(oldp+57,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__BranchE));
+        bufp->chgSData(oldp+58,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls),15);
+        bufp->chgBit(oldp+59,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
                                      >> 7U))));
-        bufp->chgBit(oldp+58,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__MemWriteE));
-        bufp->chgBit(oldp+59,(vlSelfRef.testbench__DOT__MemWrite));
-        bufp->chgBit(oldp+60,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
-                                     >> 0x0000000bU))));
-        bufp->chgBit(oldp+61,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__RegWriteE));
-        bufp->chgBit(oldp+62,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RegWriteM));
-        bufp->chgBit(oldp+63,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RegWriteW));
-        bufp->chgCData(oldp+64,((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__PCSrcE))),2);
-        bufp->chgIData(oldp+65,(((IData)(4U) + vlSelfRef.testbench__DOT__dut__DOT__PC)),32);
-        bufp->chgIData(oldp+66,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCPlus4D),32);
-        bufp->chgIData(oldp+67,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCPlus4E),32);
-        bufp->chgIData(oldp+68,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCPlus4M),32);
-        bufp->chgIData(oldp+69,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCPlus4W),32);
-        bufp->chgIData(oldp+70,(((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__PCSrcE))
-                                  ? (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCTargetE 
-                                     & (- (IData)((1U 
-                                                   & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__PCSrcE)))))
-                                  : ((IData)(4U) + vlSelfRef.testbench__DOT__dut__DOT__PC))),32);
-        bufp->chgIData(oldp+71,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCTargetE),32);
-        bufp->chgIData(oldp+72,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCD),32);
-        bufp->chgIData(oldp+73,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCE),32);
-        bufp->chgIData(oldp+74,(((0x00000400U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls))
-                                  ? (((0x00000200U 
-                                       & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls))
-                                       ? ((0x7ff80000U 
-                                           & ((- (IData)(
-                                                         (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                          >> 0x0000001fU))) 
-                                              << 0x00000013U)) 
-                                          | ((0x0007f800U 
-                                              & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                 >> 1U)) 
-                                             | ((0x00000400U 
-                                                 & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                    >> 0x0000000aU)) 
-                                                | (0x000003ffU 
-                                                   & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                      >> 0x00000015U)))))
-                                       : ((0x7ffff800U 
-                                           & ((- (IData)(
-                                                         (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                          >> 0x0000001fU))) 
-                                              << 0x0000000bU)) 
-                                          | ((0x00000400U 
-                                              & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                 << 3U)) 
-                                             | ((0x000003f0U 
-                                                 & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                    >> 0x00000015U)) 
-                                                | (0x0000000fU 
-                                                   & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                      >> 8U)))))) 
-                                     << 1U) : (((- (IData)(
-                                                           (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                            >> 0x0000001fU))) 
-                                                << 0x0000000cU) 
-                                               | ((0x00000fe0U 
-                                                   & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                      >> 0x00000014U)) 
-                                                  | (0x0000001fU 
-                                                     & ((0x00000200U 
-                                                         & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls))
-                                                         ? 
-                                                        (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                         >> 7U)
-                                                         : 
-                                                        (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                                         >> 0x00000014U))))))),32);
-        bufp->chgIData(oldp+75,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ImmExtE),32);
-        bufp->chgIData(oldp+76,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__Result),32);
-        bufp->chgIData(oldp+77,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ALUResultW),32);
-        bufp->chgIData(oldp+78,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__WriteDataE),32);
-        bufp->chgIData(oldp+79,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ReadDataW),32);
-        bufp->chgIData(oldp+80,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__RD1E),32);
-        bufp->chgIData(oldp+81,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__RD2E),32);
-        bufp->chgIData(oldp+82,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a),32);
-        bufp->chgIData(oldp+83,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b),32);
-        bufp->chgIData(oldp+84,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ResultW),32);
-        bufp->chgCData(oldp+85,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__Funct3E),3);
-        bufp->chgCData(oldp+86,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__Funct3W),3);
-        bufp->chgIData(oldp+87,(((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
+        bufp->chgBit(oldp+60,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__MemWriteE));
+        bufp->chgBit(oldp+61,(vlSelfRef.testbench__DOT__MemWrite));
+        bufp->chgBit(oldp+62,((1U & ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
+                                     >> 0x0000000eU))));
+        bufp->chgBit(oldp+63,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__RegWriteE));
+        bufp->chgBit(oldp+64,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RegWriteM));
+        bufp->chgBit(oldp+65,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__RegWriteW));
+        bufp->chgIData(oldp+66,(((IData)(4U) + vlSelfRef.testbench__DOT__dut__DOT__PC)),32);
+        bufp->chgIData(oldp+67,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCPlus4D),32);
+        bufp->chgIData(oldp+68,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCPlus4E),32);
+        bufp->chgIData(oldp+69,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCPlus4M),32);
+        bufp->chgIData(oldp+70,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCPlus4W),32);
+        bufp->chgIData(oldp+71,(((0U == (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__PCSrcE))
+                                  ? ((IData)(4U) + vlSelfRef.testbench__DOT__dut__DOT__PC)
+                                  : ((1U == (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__PCSrcE))
+                                      ? vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCTargetE
+                                      : (0xfffffffeU 
+                                         & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__Result)))),32);
+        bufp->chgIData(oldp+72,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCTargetE),32);
+        bufp->chgIData(oldp+73,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCD),32);
+        bufp->chgIData(oldp+74,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCE),32);
+        bufp->chgIData(oldp+75,(((0x00002000U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls))
+                                  ? (0xfffff000U & 
+                                     ((- (IData)((1U 
+                                                  & (~ 
+                                                     ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
+                                                      >> 0x0000000bU))))) 
+                                      & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                         & (- (IData)(
+                                                      (1U 
+                                                       & (~ 
+                                                          ((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls) 
+                                                           >> 0x0000000cU))))))))
+                                  : ((0x00001000U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls))
+                                      ? (((0x00000800U 
+                                           & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls))
+                                           ? ((0x7ff80000U 
+                                               & ((- (IData)(
+                                                             (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                              >> 0x0000001fU))) 
+                                                  << 0x00000013U)) 
+                                              | ((0x0007f800U 
+                                                  & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                     >> 1U)) 
+                                                 | ((0x00000400U 
+                                                     & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                        >> 0x0000000aU)) 
+                                                    | (0x000003ffU 
+                                                       & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                          >> 0x00000015U)))))
+                                           : ((0x7ffff800U 
+                                               & ((- (IData)(
+                                                             (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                              >> 0x0000001fU))) 
+                                                  << 0x0000000bU)) 
+                                              | ((0x00000400U 
+                                                  & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                     << 3U)) 
+                                                 | ((0x000003f0U 
+                                                     & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                        >> 0x00000015U)) 
+                                                    | (0x0000000fU 
+                                                       & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                          >> 8U)))))) 
+                                         << 1U) : (
+                                                   ((- (IData)(
+                                                               (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                                >> 0x0000001fU))) 
+                                                    << 0x0000000cU) 
+                                                   | ((0x00000fe0U 
+                                                       & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                          >> 0x00000014U)) 
+                                                      | (0x0000001fU 
+                                                         & ((0x00000800U 
+                                                             & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls))
+                                                             ? 
+                                                            (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                             >> 7U)
+                                                             : 
+                                                            (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                                             >> 0x00000014U)))))))),32);
+        bufp->chgIData(oldp+76,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ImmExtE),32);
+        bufp->chgIData(oldp+77,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__Result),32);
+        bufp->chgIData(oldp+78,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ALUResultW),32);
+        bufp->chgIData(oldp+79,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__WriteDataE),32);
+        bufp->chgIData(oldp+80,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ReadDataW),32);
+        bufp->chgIData(oldp+81,((0xfffffffeU & vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__Result)),32);
+        bufp->chgIData(oldp+82,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__RD1E),32);
+        bufp->chgIData(oldp+83,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__RD2E),32);
+        bufp->chgIData(oldp+84,(((0U == (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ForwardAE))
+                                  ? vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__RD1E
+                                  : ((1U == (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ForwardAE))
+                                      ? vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ResultW
+                                      : vlSelfRef.testbench__DOT__DataAdr))),32);
+        bufp->chgIData(oldp+85,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a),32);
+        bufp->chgIData(oldp+86,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b),32);
+        bufp->chgIData(oldp+87,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ResultW),32);
+        bufp->chgCData(oldp+88,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__Funct3E),3);
+        bufp->chgCData(oldp+89,(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__Funct3W),3);
+        bufp->chgIData(oldp+90,(((1U & (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE))
                                   ? (~ vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b)
                                   : vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b)),32);
-        bufp->chgQData(oldp+88,((0x00000001ffffffffULL 
+        bufp->chgQData(oldp+91,((0x00000001ffffffffULL 
                                  & ((QData)((IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__a)) 
                                     + ((QData)((IData)(
                                                        (1U 
@@ -205,30 +227,30 @@ void Vtestbench___024root__trace_chg_0_sub_0(Vtestbench___024root* vlSelf, Veril
                                                            ? 
                                                           (~ vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b)
                                                            : vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__alu__DOT__b))))))),33);
-        bufp->chgIData(oldp+90,((vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+        bufp->chgIData(oldp+93,((vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
                                  >> 7U)),25);
-        bufp->chgBit(oldp+91,((1U & (~ (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__StallF)))));
+        bufp->chgBit(oldp+94,((1U & (~ (IData)(vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__StallF)))));
     }
-    bufp->chgBit(oldp+92,(vlSelfRef.testbench__DOT__clk));
-    bufp->chgBit(oldp+93,(vlSelfRef.testbench__DOT__reset));
-    bufp->chgIData(oldp+94,(vlSelfRef.testbench__DOT__cycle),32);
-    bufp->chgIData(oldp+95,(vlSelfRef.testbench__DOT__dut__DOT__imem__DOT__RAM
+    bufp->chgBit(oldp+95,(vlSelfRef.testbench__DOT__clk));
+    bufp->chgBit(oldp+96,(vlSelfRef.testbench__DOT__reset));
+    bufp->chgIData(oldp+97,(vlSelfRef.testbench__DOT__cycle),32);
+    bufp->chgIData(oldp+98,(vlSelfRef.testbench__DOT__dut__DOT__imem__DOT__RAM
                             [(0x0000003fU & (vlSelfRef.testbench__DOT__dut__DOT__PC 
                                              >> 2U))]),32);
-    bufp->chgIData(oldp+96,(vlSelfRef.testbench__DOT__dut__DOT__dmem__DOT__rd),32);
-    bufp->chgIData(oldp+97,(((0U == (0x0000001fU & 
-                                     (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                      >> 0x0000000fU)))
-                              ? 0U : vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf
-                             [(0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                              >> 0x0000000fU))])),32);
-    bufp->chgIData(oldp+98,(((0U == (0x0000001fU & 
-                                     (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                      >> 0x00000014U)))
-                              ? 0U : vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf
-                             [(0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
-                                              >> 0x00000014U))])),32);
-    Vtestbench___024root__trace_chg_dtype____0(vlSelf, bufp, 99, vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf);
+    bufp->chgIData(oldp+99,(vlSelfRef.testbench__DOT__dut__DOT__dmem__DOT__rd),32);
+    bufp->chgIData(oldp+100,(((0U == (0x0000001fU & 
+                                      (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                       >> 0x0000000fU)))
+                               ? 0U : vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf
+                              [(0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                               >> 0x0000000fU))])),32);
+    bufp->chgIData(oldp+101,(((0U == (0x0000001fU & 
+                                      (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                       >> 0x00000014U)))
+                               ? 0U : vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf
+                              [(0x0000001fU & (vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__InstrD 
+                                               >> 0x00000014U))])),32);
+    Vtestbench___024root__trace_chg_dtype____0(vlSelf, bufp, 102, vlSelfRef.testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__rf__DOT__rf);
 }
 
 void Vtestbench___024root__trace_chg_dtype____0(Vtestbench___024root* vlSelf, VerilatedVcd::Buffer* bufp, uint32_t offset, const VlUnpacked<IData/*31:0*/, 32>& __VdtypeVar) {

@@ -1,8 +1,9 @@
 module datapath(input logic clk, reset,
                 input logic [1:0] ResultSrcW, PCSrcE,
                 input logic ALUSrcE,
+                input logic [1:0] SrcASelectE,
                 input logic RegWriteW,
-                input logic [1:0] ImmSrcD,
+                input logic [2:0] ImmSrcD,
                 input logic [3:0] ALUControlE,
                 output logic [2:0] Funct3M,
                 output logic ZeroE, LessSignedE, LessUnsignedE,
@@ -19,8 +20,8 @@ module datapath(input logic clk, reset,
     logic [31:0] PCNext, PCTarget, PCTargetE, PCD, PCE;
     logic [31:0] ImmExtD, ImmExtE;
     logic [31:0] ALUResultE, ALUResultW, WriteDataE, StoreDataE;
-    logic [31:0] ReadDataW;
-    logic [31:0] RD1D, RD2D, RD1E, RD2E, SrcAE, SrcBE;
+    logic [31:0] ReadDataW, JalrTargetE;
+    logic [31:0] RD1D, RD2D, RD1E, RD2E, PreSrcAE, SrcAE, SrcBE;
     logic [31:0] ResultW;
     logic [2:0] Funct3E, Funct3W;
 
@@ -57,7 +58,8 @@ module datapath(input logic clk, reset,
     floprc #(3) f3e(clk, reset, FlushE, InstrD[14:12], Funct3E);
 
     // ALU logic
-    mux3 #(32) srcafwdmux(RD1E, ResultW, ALUResultM, ForwardAE, SrcAE);
+    mux3 #(32) srcafwdmux(RD1E, ResultW, ALUResultM, ForwardAE, PreSrcAE);
+    mux3 #(32) utypemux(PreSrcAE, 32'b0, PCE, SrcASelectE, SrcAE);
     mux3 #(32) srcbfwdmux(RD2E, ResultW, ALUResultM, ForwardBE, WriteDataE);
     mux2 #(32) srcbmux(WriteDataE, ImmExtE, ALUSrcE, SrcBE);
     alu alu(SrcAE, SrcBE, ALUControlE, ALUResultE, ZeroE, LessSignedE, LessUnsignedE);

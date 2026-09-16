@@ -9,10 +9,11 @@ module controller(input logic clk, reset,
                   output logic [1:0] PCSrcE,
                   output logic ALUSrcE,
                   output logic RegWriteM, RegWriteW,
-                  output logic [1:0] ImmSrcD,
+                  output logic [2:0] ImmSrcD,
+                  output logic [1:0] SrcASelectE,
                   output logic [3:0] ALUControlE);
     logic RegWriteD, BranchD, ALUSrcD, MemWriteD;
-    logic [1:0] ResultSrcD, JumpD, JumpE;
+    logic [1:0] ResultSrcD, JumpD, JumpE, SrcASelectD;
     logic [3:0] ALUControlD;
     logic RegWriteE, BranchE, MemWriteE;
     logic [1:0] ResultSrcM;
@@ -20,7 +21,7 @@ module controller(input logic clk, reset,
     logic [2:0] funct3E, funct3M, funct3W;
 
     maindec md(op, ResultSrcD, MemWriteD, BranchD,
-                ALUSrcD, RegWriteD, JumpD, ImmSrcD, ALUOp);
+                ALUSrcD, RegWriteD, JumpD, ImmSrcD, SrcASelectD, ALUOp);
     aludec ad(op[5], funct3D, funct7b5, ALUOp, ALUControlD);
 
     // PIPELINE EXECUTE
@@ -31,6 +32,7 @@ module controller(input logic clk, reset,
     floprc #(1) branchflop(clk, reset, FlushE, BranchD, BranchE);
     floprc #(4) alucontrolflop(clk, reset, FlushE, ALUControlD, ALUControlE);
     floprc #(1) alusrcflop(clk, reset, FlushE, ALUSrcD, ALUSrcE);
+    floprc #(2) srcaselectflop(clk, reset, FlushE, SrcASelectD, SrcASelectE);
     floprc #(3) funct3flop(clk, reset, FlushE, funct3D, funct3E);
     always_comb begin
         PCSrcE = JumpE;

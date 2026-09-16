@@ -82,3 +82,11 @@ little-endian ordering, and preservation of bytes unaffected by partial stores.
 - The least-significant bit of a `jalr` target is cleared, as required by the ISA.
 - `PCSrcE` is now 2 bits wide so it can select the sequential PC, a PC relative target, or a `jalr` target. Branch logic and hazard unit updated.
 - The first PC mux was expanded from a mux2 to a mux3 so it can select the execute-stage `jalr` target.
+
+### Load Immediates
+
+`lui` `auipc`
+
+- ImmSrc was extended by a bit so that it can encode the U-Type instruction.
+- A mux3 was added in the Execute Stage SrcAE path to aditionally select zero or PCE.
+- SrcASelectE controls the new mux3 and is set in the controller from the Decode Stage.

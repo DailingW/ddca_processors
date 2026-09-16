@@ -35,12 +35,13 @@ class alignas(VL_CACHE_LINE_BYTES) Vtestbench___024root final {
         CData/*0:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__FlushE;
         CData/*1:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__ForwardAE;
         CData/*1:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__ForwardBE;
+        CData/*1:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__PCSrcE;
         CData/*1:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__ResultSrcE;
         CData/*1:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__ResultSrcW;
+        CData/*1:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__SrcASelectE;
         CData/*3:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__ALUControlE;
         CData/*2:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__Funct3E;
         CData/*2:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__Funct3W;
-        CData/*1:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__PCSrcE;
         CData/*1:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__JumpE;
         CData/*0:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__RegWriteE;
         CData/*0:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__BranchE;
@@ -62,7 +63,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtestbench___024root final {
         CData/*0:0*/ __VactPhaseResult;
         CData/*0:0*/ __VinactPhaseResult;
         CData/*0:0*/ __VnbaPhaseResult;
-        SData/*11:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls;
+        SData/*14:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__c__DOT__md__DOT__controls;
         IData/*31:0*/ testbench__DOT____VlemCall_1__read_reg;
         IData/*31:0*/ testbench__DOT____VlemCall_0__read_reg;
         IData/*31:0*/ testbench__DOT__WriteData;
@@ -80,9 +81,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vtestbench___024root final {
         IData/*31:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCD;
         IData/*31:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__PCE;
         IData/*31:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ImmExtE;
-        IData/*31:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ALUResultW;
     };
     struct {
+        IData/*31:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ALUResultW;
         IData/*31:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__WriteDataE;
         IData/*31:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__StoreDataE;
         IData/*31:0*/ testbench__DOT__dut__DOT__rvpipeline__DOT__dp__DOT__ReadDataW;
